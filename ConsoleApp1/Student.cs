@@ -49,14 +49,14 @@ public class Program
         var validFaculties = students.Select(s => s.Faculty).Distinct().ToList();
 
         // Ввод данных от пользователя
-        Console.Write("Введите название факультета: ");
+        Console.Write("Введите название факультета: ");   // Не хватает примера для ввода
         string inputFaculty = Console.ReadLine();
 
         // Проверка корректности ввода факультета
         if (!validFaculties.Contains(inputFaculty))
         {
-            Console.WriteLine("Некорректный факультет. Завершение программы.");
-            Console.WriteLine("Press any key to exit...");
+            Console.WriteLine("Некорректный факультет. Завершение программы.");   // Не операции для повторного ввода данных и программа закрывается 
+            Console.WriteLine("Press any key to exit...");      
             Console.ReadKey();
             return;
         }
